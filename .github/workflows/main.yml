@@ -15,4 +15,4 @@ jobs:
       run: |
         wget https://github.com/Mosnio/mehi1/raw/main/config.json
         wget https://github.com/Mosnio/mehi1/raw/main/bot.php
-        php bot.php
+        echo -e "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.106 Safari/537.36\nbitPTC=jdr47qdlbbmej8iqms7aficntl" | php bot.php
