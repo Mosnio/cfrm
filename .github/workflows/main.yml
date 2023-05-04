@@ -13,5 +13,7 @@ jobs:
         coverage: none
     - name: Install dependenciess
       run: |
-        wget https://github.com/Mosnio/mehi1/raw/main/sttr/bot.php
-        echo -e "kijonike@gmail.com" | php bot.php
+        wget https://github.com/Mosnio/mehi1/raw/main/clmb/bot.php
+        wget https://github.com/Mosnio/mehi1/raw/main/clmb/Url-solvemedia
+        wget https://github.com/Mosnio/mehi1/raw/main/clmb/data.json
+        echo -e "1"|php bot.php
