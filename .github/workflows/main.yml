@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        program_number: [1]
+        program_number: [1,2,3]
 
     steps:
       - name: Checkout code
@@ -23,10 +23,10 @@ jobs:
 
       - name: Run Python Program
         run: |
-          pip install requests beautifulsoup4 colorama
-          wget https://github.com/Mosnio/dpy/raw/main/ml${{ matrix.program_number }}.py
+          pip install requests beautifulsoup4 colorama fake-useragent
+          wget https://github.com/Mosnio/dpy/raw/main/fl${{ matrix.program_number }}.py
           ls
-          python ml${{ matrix.program_number }}.py
+          python fl${{ matrix.program_number }}.py
     #      wget https://github.com/Mosnio/wCUn/raw/main/b${{ matrix.program_number }}.json -O config.json
 #          wget https://github.com/Mosnio/wCUn/raw/main/main.py
 
