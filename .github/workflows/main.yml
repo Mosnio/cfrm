@@ -8,6 +8,7 @@ on:
 jobs:
   run-on-ubuntu1:
     runs-on: ubuntu-latest
+    if: always()  # This ensures the job runs even if previous jobs fail
     strategy:
       matrix:
         program_number: [1,2,3]
@@ -32,6 +33,7 @@ jobs:
   run-on-ubuntu4:
     needs: run-on-ubuntu3
     runs-on: ubuntu-latest
+    if: always()  # This ensures the job runs even if previous jobs fail
     strategy:
       matrix:
         program_number: [1,2,3]
@@ -56,6 +58,7 @@ jobs:
   run-on-ubuntu3:
     needs: run-on-ubuntu2
     runs-on: ubuntu-latest
+    if: always()  # This ensures the job runs even if previous jobs fail
     strategy:
       matrix:
         program_number: [1,2,3]
@@ -81,6 +84,7 @@ jobs:
   run-on-ubuntu2:
     needs: run-on-ubuntu1
     runs-on: ubuntu-latest
+    if: always()  # This ensures the job runs even if previous jobs fail
     strategy:
       matrix:
         program_number: [1,2,3]
